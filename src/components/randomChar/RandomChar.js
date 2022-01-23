@@ -12,6 +12,7 @@ export const RandomChar = () => {
   const { loading, error, clearError, oneChar } = useGetMarvelData();
 
   useEffect(() => {
+    console.log("effect");
     getRandomChar();
   }, []);
 
@@ -38,6 +39,7 @@ export const RandomChar = () => {
 
   return (
     <div className="randomchar">
+      {console.log("render")}
       {checkLoading()}
       <div className="randomchar__static">
         <p className="randomchar__title">
